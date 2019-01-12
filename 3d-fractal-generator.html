@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>3D Fractal Generator (based on Marble Marcher)</title>
+	<meta name="description" content="3D fractal generator written in JavaScript." />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<link rel="stylesheet" href="./assets/style.css" type="text/css" />
+	<link rel="shortcut icon" href="./favicon.ico" />
+
+	<script src="./assets/gl-matrix.js"></script>
+	<script src="./3d-fractal-generator.js"></script>
+</head>
+<body>
+
+<div id="control">
+	<h1>3D Fractal Generator</h1>
+
+	<p>
+		<label>Rotate</label>
+		<input id="rotateInput" type="checkbox" />
+	</p>
+	<p>
+		<label>Zoom</label>
+		<input id="camDistanceInput" type="number" value="12" step="1" />
+	</p>
+	<p>
+		<label>Resolution</label>
+		<select id="resolutionInput">
+			<option value="200x200">200x200</option>
+			<option value="400x400">400x400</option>
+			<option value="800x800">800x800</option>
+			<option value="!x!" selected>Full window</option>
+		</select>
+	</p>
+	<p>
+		<label>Frac scale</label>
+		<input id="fracScaleInput" type="number" value="1.7" step="0.05" />
+	</p>
+	<p>
+		<label>Frac ang 1</label>
+		<input id="fracAng1Input" type="number" value="1.58" step="0.05" />
+	</p>
+	<p>
+		<label>Frac ang 2</label>
+		<input id="fracAng2Input" type="number" value="0.0" step="0.05" />
+	</p>
+	<p>
+		<label>Frac shift</label>
+		<input id="fracShift1Input" type="number" value="-0.52" step="0.05" />
+		<input id="fracShift2Input" type="number" value="-1.35" step="0.05" />
+		<input id="fracShift3Input" type="number" value="3.59" step="0.05" />
+	</p>
+	<p>
+		<label>Color</label>
+		<input id="fracCol1Input" type="number" value="0.05" step="0.05" />
+		<input id="fracCol2Input" type="number" value="0.58" step="0.05" />
+		<input id="fracCol3Input" type="number" value="0.4" step="0.05" />
+	</p>
+
+	<p>
+		<label>Preset</label>
+		<select id="preset">
+			<option value="scale,1.8,angle,-0.12,0.5,shift,-2.12,-2.75,0.49,color,0.42,0.38,0.19" selected>Jump The Crater</option>
+			<option value="scale,1.9073,angle,-9.83,-1.16,shift,-3.508,-3.593,3.295,color,-0.34,0.12,0.08">Too Many Trees</option>
+			<option value="scale,2.02,angle,-1.57,1.62,shift,-3.31,6.19,1.53,color,0.12,-0.09,-0.09">Hole In One</option>
+			<option value="scale,1.66,angle,1.52,0.19,shift,-3.83,-1.94,-1.09,color,0.42,0.38,0.19">Beware Of Bumps</option>
+			<option value="scale,1.58,angle,-1.45,3.95,shift,-1.55,-0.13,-2.52,color,-1.17,-0.4,-1.0">Mountain Climbing</option>
+			<option value="scale,1.87,angle,-3.12,0.02,shift,-3.57,0.129,2.95,color,0.42,.0.38,0.19">The Catwalk</option>
+			<option value="scale,1.81,angle,-4.84,-2.99,shift,-2.905,0.765,-4.165,color,0.16,0.38,0.15">Mind The Gap</option>
+			<option value="scale,1.93,angle,1.34637,1.58,shift,-2.31,1.123,1.56,color,0.42,0.38,0.19">Don't Get Crushed</option>
+			<option value="scale,1.88,angle,1.52,4.91,shift,-4.54,-1.26,0.1,color,-1.0,0.3,-0.43">The Sponge</option>
+			<option value="scale,2.0773,angle,-9.66,-1.34,shift,-1.238,-1.533,1.085,color,0.42,0.38,0.19">Around The Citadel</option>
+		</select>
+		<button id="setPresetButton">Set</button>
+	</p>
+	<p>
+		Based on <a href="https://github.com/HackerPoet/MarbleMarcher">MarbleMarcher</a><br />
+		by <a href="https://twitter.com/b4rtaz">b4rtaz</a>
+	</p>
+</div>
+
+<canvas id="canvas"></canvas>
+
+</body>
+</html>

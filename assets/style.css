@@ -1,0 +1,17 @@
+/**
+ * @author Bartlomiej Tadych, b4rtaz
+ */
+
+html, body, p, label, h1 {margin: 0; padding: 0;}
+body, input, select {font: 8pt Tahoma, Verdana, Serif; line-height: 1.35em;}
+
+body {margin: 0; padding: 0; color: #FFF; text-align: center; background: #242424;}
+
+#control {position: absolute; left: 0; top: 0; background: rgba(0, 0, 0, 0.4);}
+#control h1 {font-size: 12pt; padding: 10px 0 0;}
+#control p {display: block; padding: 5px;}
+#control p label {display: block;}
+#control p input[type=number] {width: 50px; border: 0; padding: 5px;}
+#control p a {color: #FFF;}
+
+#canvas {display: block; margin: 0 auto;}
