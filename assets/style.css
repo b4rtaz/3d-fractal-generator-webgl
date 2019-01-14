@@ -2,16 +2,20 @@
  * @author Bartlomiej Tadych, b4rtaz
  */
 
-html, body, p, label, h1 {margin: 0; padding: 0;}
-body, input, select {font: 8pt Tahoma, Verdana, Serif; line-height: 1.35em;}
+html, body, p, label, h1, h4, input, select {margin: 0; padding: 0;}
+body, input, select {font: 8pt Verdana, Tahoma, Serif; line-height: 1.4em;}
 
 body {margin: 0; padding: 0; color: #FFF; text-align: center; background: #242424;}
 
-#control {position: absolute; left: 0; top: 0; background: rgba(0, 0, 0, 0.4);}
-#control h1 {font-size: 12pt; padding: 10px 0 0;}
-#control p {display: block; padding: 5px;}
+#control {position: absolute; left: 0; top: 0; padding: 5px; background: rgba(0, 0, 0, 0.4); box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);}
+#control a {color: #FFF;}
+#control a:hover {color: #FFED17;}
+#control .title {padding: 10px; background: rgba(0, 0, 0, 0.3);}
+#control h1 {font-size: 11pt;}
+#control h4 {padding: 10px 0 0;}
+#control label {padding: 0 0 2px;}
+#control p {display: block; padding: 5px 0;}
 #control p label {display: block;}
-#control p input[type=number] {width: 50px; border: 0; padding: 5px;}
-#control p a {color: #FFF;}
+#control p input[type=number] {width: 50px; border: 0; padding: 3px 5px;}
 
 #canvas {display: block; margin: 0 auto;}
